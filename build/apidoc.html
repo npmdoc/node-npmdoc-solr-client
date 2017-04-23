@@ -1,0 +1,3155 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/lbdremy/solr-node-client#readme"
+
+    >solr-client (v0.6.0)</a>
+</h1>
+<h4> A Solr client library for indexing, adding, deleting, committing, optimizing and searching documents within an Apache Solr installation (version>=3.2)</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.solr-client">module solr-client</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.collection">
+            function <span class="apidocSignatureSpan">solr-client.</span>collection
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.createClient">
+            function <span class="apidocSignatureSpan">solr-client.</span>createClient
+            <span class="apidocSignatureSpan">(host, port, core, path, agent, secure, bigint, solrVersion)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.query">
+            function <span class="apidocSignatureSpan">solr-client.</span>query
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.solr_error">
+            function <span class="apidocSignatureSpan">solr-client.</span>solr_error
+            <span class="apidocSignatureSpan">(req, res, htmlMessage)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">solr-client.</span>array</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">solr-client.</span>collection.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">solr-client.</span>format</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">solr-client.</span>query.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">solr-client.</span>solr</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">solr-client.</span>type</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">solr-client.</span>version</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.solr-client.array">module solr-client.array</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.array.toArray">
+            function <span class="apidocSignatureSpan">solr-client.array.</span>toArray
+            <span class="apidocSignatureSpan">(value, defaultIfNull)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.solr-client.collection">module solr-client.collection</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.collection.collection">
+            function <span class="apidocSignatureSpan">solr-client.</span>collection
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.solr-client.collection.prototype">module solr-client.collection.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.collection.prototype.addReplica">
+            function <span class="apidocSignatureSpan">solr-client.collection.prototype.</span>addReplica
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.collection.prototype.addReplicaProp">
+            function <span class="apidocSignatureSpan">solr-client.collection.prototype.</span>addReplicaProp
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.collection.prototype.addRole">
+            function <span class="apidocSignatureSpan">solr-client.collection.prototype.</span>addRole
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.collection.prototype.balanceShardUnique">
+            function <span class="apidocSignatureSpan">solr-client.collection.prototype.</span>balanceShardUnique
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.collection.prototype.build">
+            function <span class="apidocSignatureSpan">solr-client.collection.prototype.</span>build
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.collection.prototype.clusterProp">
+            function <span class="apidocSignatureSpan">solr-client.collection.prototype.</span>clusterProp
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.collection.prototype.clusterStatus">
+            function <span class="apidocSignatureSpan">solr-client.collection.prototype.</span>clusterStatus
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.collection.prototype.create">
+            function <span class="apidocSignatureSpan">solr-client.collection.prototype.</span>create
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.collection.prototype.createAlias">
+            function <span class="apidocSignatureSpan">solr-client.collection.prototype.</span>createAlias
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.collection.prototype.createShard">
+            function <span class="apidocSignatureSpan">solr-client.collection.prototype.</span>createShard
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.collection.prototype.delete">
+            function <span class="apidocSignatureSpan">solr-client.collection.prototype.</span>delete
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.collection.prototype.deleteAlias">
+            function <span class="apidocSignatureSpan">solr-client.collection.prototype.</span>deleteAlias
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.collection.prototype.deleteReplica">
+            function <span class="apidocSignatureSpan">solr-client.collection.prototype.</span>deleteReplica
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.collection.prototype.deleteReplicaProp">
+            function <span class="apidocSignatureSpan">solr-client.collection.prototype.</span>deleteReplicaProp
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.collection.prototype.deleteShard">
+            function <span class="apidocSignatureSpan">solr-client.collection.prototype.</span>deleteShard
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.collection.prototype.list">
+            function <span class="apidocSignatureSpan">solr-client.collection.prototype.</span>list
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.collection.prototype.migrate">
+            function <span class="apidocSignatureSpan">solr-client.collection.prototype.</span>migrate
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.collection.prototype.overseerStatus">
+            function <span class="apidocSignatureSpan">solr-client.collection.prototype.</span>overseerStatus
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.collection.prototype.rebalanceLeaders">
+            function <span class="apidocSignatureSpan">solr-client.collection.prototype.</span>rebalanceLeaders
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.collection.prototype.reload">
+            function <span class="apidocSignatureSpan">solr-client.collection.prototype.</span>reload
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.collection.prototype.removeRole">
+            function <span class="apidocSignatureSpan">solr-client.collection.prototype.</span>removeRole
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.collection.prototype.requestStatus">
+            function <span class="apidocSignatureSpan">solr-client.collection.prototype.</span>requestStatus
+            <span class="apidocSignatureSpan">(requestid)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.collection.prototype.set">
+            function <span class="apidocSignatureSpan">solr-client.collection.prototype.</span>set
+            <span class="apidocSignatureSpan">(parameter)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.collection.prototype.splitShard">
+            function <span class="apidocSignatureSpan">solr-client.collection.prototype.</span>splitShard
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.solr-client.format">module solr-client.format</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.format.dateISOify">
+            function <span class="apidocSignatureSpan">solr-client.format.</span>dateISOify
+            <span class="apidocSignatureSpan">(obj)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.format.escapeSpecialChars">
+            function <span class="apidocSignatureSpan">solr-client.format.</span>escapeSpecialChars
+            <span class="apidocSignatureSpan">(s)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.format.stringify">
+            function <span class="apidocSignatureSpan">solr-client.format.</span>stringify
+            <span class="apidocSignatureSpan">(obj, sep, eq, name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.format.toISOString">
+            function <span class="apidocSignatureSpan">solr-client.format.</span>toISOString
+            <span class="apidocSignatureSpan">(date)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.solr-client.query">module solr-client.query</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.query.query">
+            function <span class="apidocSignatureSpan">solr-client.</span>query
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.solr-client.query.prototype">module solr-client.query.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.query.prototype.bf">
+            function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>bf
+            <span class="apidocSignatureSpan">(functions)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.query.prototype.boost">
+            function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>boost
+            <span class="apidocSignatureSpan">(functions)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.query.prototype.bq">
+            function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>bq
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.query.prototype.build">
+            function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>build
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.query.prototype.cursorMark">
+            function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>cursorMark
+            <span class="apidocSignatureSpan">(mark)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.query.prototype.debugQuery">
+            function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>debugQuery
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.query.prototype.defType">
+            function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>defType
+            <span class="apidocSignatureSpan">(type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.query.prototype.df">
+            function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>df
+            <span class="apidocSignatureSpan">(df)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.query.prototype.dismax">
+            function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>dismax
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.query.prototype.edismax">
+            function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>edismax
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.query.prototype.facet">
+            function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>facet
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.query.prototype.fl">
+            function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>fl
+            <span class="apidocSignatureSpan">(fields)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.query.prototype.group">
+            function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>group
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.query.prototype.groupBy">
+            function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>groupBy
+            <span class="apidocSignatureSpan">(field)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.query.prototype.hl">
+            function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>hl
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.query.prototype.matchFilter">
+            function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>matchFilter
+            <span class="apidocSignatureSpan">(field, value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.query.prototype.mlt">
+            function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>mlt
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.query.prototype.mm">
+            function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>mm
+            <span class="apidocSignatureSpan">(minimum)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.query.prototype.pf">
+            function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>pf
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.query.prototype.ps">
+            function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>ps
+            <span class="apidocSignatureSpan">(slop)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.query.prototype.q">
+            function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>q
+            <span class="apidocSignatureSpan">(q)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.query.prototype.qf">
+            function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>qf
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.query.prototype.qop">
+            function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>qop
+            <span class="apidocSignatureSpan">(op)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.query.prototype.qs">
+            function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>qs
+            <span class="apidocSignatureSpan">(slop)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.query.prototype.qt">
+            function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>qt
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.query.prototype.rangeFilter">
+            function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>rangeFilter
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.query.prototype.requestHandler">
+            function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>requestHandler
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.query.prototype.restrict">
+            function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>restrict
+            <span class="apidocSignatureSpan">(fields)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.query.prototype.rows">
+            function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>rows
+            <span class="apidocSignatureSpan">(rows)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.query.prototype.set">
+            function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>set
+            <span class="apidocSignatureSpan">(parameter)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.query.prototype.sort">
+            function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>sort
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.query.prototype.start">
+            function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>start
+            <span class="apidocSignatureSpan">(start)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.query.prototype.tie">
+            function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>tie
+            <span class="apidocSignatureSpan">(tiebreaker)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.query.prototype.timeout">
+            function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>timeout
+            <span class="apidocSignatureSpan">(time)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.solr-client.solr">module solr-client.solr</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.solr.createClient">
+            function <span class="apidocSignatureSpan">solr-client.solr.</span>createClient
+            <span class="apidocSignatureSpan">(host, port, core, path, agent, secure, bigint, solrVersion)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.solr-client.solr_error">module solr-client.solr_error</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.solr_error.solr_error">
+            function <span class="apidocSignatureSpan">solr-client.</span>solr_error
+            <span class="apidocSignatureSpan">(req, res, htmlMessage)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.solr_error.super_">
+            function <span class="apidocSignatureSpan">solr-client.solr_error.</span>super_
+            <span class="apidocSignatureSpan">(req, res, message)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.solr-client.type">module solr-client.type</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.type.isNumber">
+            function <span class="apidocSignatureSpan">solr-client.type.</span>isNumber
+            <span class="apidocSignatureSpan">(value, strict)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.solr-client.version">module solr-client.version</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.solr-client.version.version">
+            function <span class="apidocSignatureSpan">solr-client.</span>version
+            <span class="apidocSignatureSpan">(solrVersion)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">solr-client.version.</span>Solr3_2</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">solr-client.version.</span>Solr4_0</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">solr-client.version.</span>Solr5_0</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">solr-client.version.</span>Solr5_1</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">solr-client.version.</span>versionsEnum</span>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.solr-client" id="apidoc.module.solr-client">module solr-client</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.collection" id="apidoc.element.solr-client.collection">
+        function <span class="apidocSignatureSpan">solr-client.</span>collection
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Collection(){
+  this.parameters = [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.createClient" id="apidoc.element.solr-client.createClient">
+        function <span class="apidocSignatureSpan">solr-client.</span>createClient
+        <span class="apidocSignatureSpan">(host, port, core, path, agent, secure, bigint, solrVersion)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createClient(host, port, core, path, agent, secure, bigint, solrVersion){
+  var options = (typeof host === &#x27;object&#x27;) ? host : {
+      host : host,
+      port : port,
+      core : core,
+      path : path,
+      agent : agent,
+      secure : secure,
+      bigint : bigint,
+      solrVersion: solrVersion
+   };
+  return new Client(options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+- Commands supported: search(select), add, delete, update, commit, rollback, optimize, ping, real-time get, prepare commit, soft
+ commit, arbitrary search handler (i.e: mlt, luke ...)
+- Lucene query / DisMax query
+- Grouping / Field Collapsing. (Apache Solr version must be &#x3e;= 3.3)
+- Convenients methods for querying with Facet, MoreLikeThis
+- HTTP Basic Access Authentication
+- Over HTTPS as well
+- Use json-bigint to handle correctly numbers too large for Javascript Number such as the values of the fields *_l and \_version\_. By default json-bigint library is not used because the performance difference compared to the native JSON library is too important with &#x22;large&#x22; chunk of JSON (https://github.com/lbdremy/solr-node-client/issues/114#issuecomment-54165595), but you want to enable it if you use the Optimistic Concurreny feature available in Solr 4.x, along with RealTime Get and Atomic Updates features because they use the \_version\_ field. In order to enable it do `var client = solr.<span class="apidocCodeKeywordSpan">createClient</span>({ bigint : true})` or directly on the client instance `client.options.bigint = true`.
+
+##Documentation
+
+See the website at http://lbdremy.github.com/solr-node-client/.
+
+##Usage
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.query" id="apidoc.element.solr-client.query">
+        function <span class="apidocSignatureSpan">solr-client.</span>query
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Query(options){
+   this.solrVersion = (options &#x26;&#x26; options.solrVersion) || undefined;
+   this.parameters = [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Client.prototype.query = function(){
+return new Query(this.options);
+}
+
+/**
+ * Create an instance of `Query`
+ * NOTE: This method will be deprecated in the v0.6 release. Please use `Client.<span class="apidocCodeKeywordSpan">query</span>()`
+instead.
+ *
+ * @return {Query}
+ * @api public
+ */
+
+Client.prototype.createQuery = function(){
+return new Query(this.options);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.solr_error" id="apidoc.element.solr-client.solr_error">
+        function <span class="apidocSignatureSpan">solr-client.</span>solr_error
+        <span class="apidocSignatureSpan">(req, res, htmlMessage)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function SolrError(req, res, htmlMessage){
+   var message = &#x27;&#x27;;
+   if(htmlMessage){
+      var matches = htmlMessage.match(/&#x3c;pre&#x3e;([\s\S]+)&#x3c;\/pre&#x3e;/);
+      message = decode((matches || [&#x27;&#x27;, htmlMessage])[1].trim());
+   }
+   HTTPError.call(this, req, res, message);
+   Error.captureStackTrace(this,arguments.callee);
+   this.name = &#x27;SolrError&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.solr-client.array" id="apidoc.module.solr-client.array">module solr-client.array</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.array.toArray" id="apidoc.element.solr-client.array.toArray">
+        function <span class="apidocSignatureSpan">solr-client.array.</span>toArray
+        <span class="apidocSignatureSpan">(value, defaultIfNull)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toArray(value, defaultIfNull) {
+  defaultIfNull = defaultIfNull || &#x27;&#x27;;
+
+  function defaultValue(value) {
+    return (value === null || value === undefined) ? defaultIfNull : value;
+  }
+
+  return (Array.isArray(value)) ? value : [defaultValue(value)];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var self = this;
+if(options.on === false){
+   this.parameters.push(&#x27;group=false&#x27;);
+}else{
+   this.parameters.push(&#x27;group=true&#x27;);
+}
+if( options.field ){
+   options.field = arrayUtils.<span class="apidocCodeKeywordSpan">toArray</span>(options.field);
+   options.field.forEach(function(field){
+     self.parameters.push(&#x27;group.field=&#x27; + field);
+   });
+}
+if( options.limit !== undefined){
+   this.parameters.push(&#x27;group.limit=&#x27; + options.limit);
+}
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.solr-client.collection" id="apidoc.module.solr-client.collection">module solr-client.collection</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.collection.collection" id="apidoc.element.solr-client.collection.collection">
+        function <span class="apidocSignatureSpan">solr-client.</span>collection
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Collection(){
+  this.parameters = [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.solr-client.collection.prototype" id="apidoc.module.solr-client.collection.prototype">module solr-client.collection.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.collection.prototype.addReplica" id="apidoc.element.solr-client.collection.prototype.addReplica">
+        function <span class="apidocSignatureSpan">solr-client.collection.prototype.</span>addReplica
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addReplica = function (options) {
+  var self = this;
+  this.parameters.push(&#x27;action=ADDREPLICA&#x27;);
+  if(options.collection){
+    this.parameters.push(&#x27;collection=&#x27; + options.collection);
+  }
+  if(options.shard){
+    this.parameters.push(&#x27;shard=&#x27; + options.shard);
+  }
+  if(options.route){
+    this.parameters.push(&#x27;_route_=&#x27; + options.route);
+  }
+  if(options.node){
+    this.parameters.push(&#x27;node=&#x27; + options.node);
+  }
+  if(options.async){
+    this.parameters.push(&#x27;async=&#x27; + options.async);
+  }
+
+  return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.collection.prototype.addReplicaProp" id="apidoc.element.solr-client.collection.prototype.addReplicaProp">
+        function <span class="apidocSignatureSpan">solr-client.collection.prototype.</span>addReplicaProp
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addReplicaProp = function (options) {
+  var self = this;
+  this.parameters.push(&#x27;action=ADDREPLICAPROP&#x27;);
+  if(options.collection){
+    this.parameters.push(&#x27;collection=&#x27; + options.collection);
+  }
+  if(options.shard){
+    this.parameters.push(&#x27;shard=&#x27; + options.shard);
+  }
+  if(options.replica){
+    this.parameters.push(&#x27;replica=&#x27; + options.replica);
+  }
+  if(options.property){
+    this.parameters.push(&#x27;property=&#x27; + options.property);
+  }
+  if(options.propertyValue !== undefined){
+    this.parameters.push(&#x27;property.value=&#x27; + options.propertyValue);
+  }
+  if(options.shardUnique !== undefined){
+    this.parameters.push(&#x27;shardUnique=&#x27; + options.shardUnique);
+  }
+
+  return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.collection.prototype.addRole" id="apidoc.element.solr-client.collection.prototype.addRole">
+        function <span class="apidocSignatureSpan">solr-client.collection.prototype.</span>addRole
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addRole = function (options) {
+  var self = this;
+  this.parameters.push(&#x27;action=ADDROLE&#x27;);
+  if(options.role){
+    this.parameters.push(&#x27;role=&#x27; + options.role);
+  }
+  if(options.node){
+    this.parameters.push(&#x27;node=&#x27; + options.node);
+  }
+
+  return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.collection.prototype.balanceShardUnique" id="apidoc.element.solr-client.collection.prototype.balanceShardUnique">
+        function <span class="apidocSignatureSpan">solr-client.collection.prototype.</span>balanceShardUnique
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">balanceShardUnique = function (options) {
+  var self = this;
+  this.parameters.push(&#x27;action=BALANCESHARDUNIQUE&#x27;);
+  if(options.collection){
+    this.parameters.push(&#x27;collection=&#x27; + options.collection);
+  }
+  if(options.property){
+    this.parameters.push(&#x27;property=&#x27; + options.property);
+  }
+  if(options.onlyActiveNodes !== undefined){
+    this.parameters.push(&#x27;onlyActiveNodes=&#x27; + options.onlyActiveNodes);
+  }
+  if(options.shardUnique !== undefined){
+    this.parameters.push(&#x27;shardUnique=&#x27; + options.shardUnique);
+  }
+
+  return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.collection.prototype.build" id="apidoc.element.solr-client.collection.prototype.build">
+        function <span class="apidocSignatureSpan">solr-client.collection.prototype.</span>build
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">build = function (){
+  return this.parameters.join(&#x27;&#x26;&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Client.prototype.get = function(handler,query,callback){
+
+var parameters = &#x27;&#x27;;
+if(typeof query === &#x27;function&#x27;){
+   callback = query;
+}else if((query instanceof Query) || (query instanceof Collection)){
+   parameters += query.<span class="apidocCodeKeywordSpan">build</span>();
+}else if(typeof query === &#x27;object&#x27;){
+   parameters += querystring.stringify(query);
+}else if(typeof query === &#x27;string&#x27;){
+   parameters += query;
+}
+var pathArray;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.collection.prototype.clusterProp" id="apidoc.element.solr-client.collection.prototype.clusterProp">
+        function <span class="apidocSignatureSpan">solr-client.collection.prototype.</span>clusterProp
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">clusterProp = function (options) {
+  var self = this;
+  this.parameters.push(&#x27;action=CLUSTERPROP&#x27;);
+  if(options.name){
+    this.parameters.push(&#x27;name=&#x27; + options.name);
+  }
+  if(options.val !== undefined){
+    this.parameters.push(&#x27;val=&#x27; + options.val);
+  }
+
+  return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.collection.prototype.clusterStatus" id="apidoc.element.solr-client.collection.prototype.clusterStatus">
+        function <span class="apidocSignatureSpan">solr-client.collection.prototype.</span>clusterStatus
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">clusterStatus = function () {
+  var self = this;
+  this.parameters.push(&#x27;action=CLUSTERSTATUS&#x27;);
+
+  return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.collection.prototype.create" id="apidoc.element.solr-client.collection.prototype.create">
+        function <span class="apidocSignatureSpan">solr-client.collection.prototype.</span>create
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (options) {
+  var self = this;
+  this.parameters.push(&#x27;action=CREATE&#x27;);
+  if(options.name){
+    this.parameters.push(&#x27;name=&#x27; + options.name);
+  }
+  if(options.routerName){
+    this.parameters.push(&#x27;router.name=&#x27; + options.routerName);
+  }
+  if(options.numShards !== undefined){
+    this.parameters.push(&#x27;numShards=&#x27; + options.numShards);
+  }
+  if(options.shards !== undefined){
+    if( typeof(options.shards) === &#x27;string&#x27;) {
+      this.parameters.push(&#x27;shards=&#x27; + options.shards);
+    }else{
+      this.parameters.push(&#x27;shards=&#x27; + options.shards.join());
+    }
+  }
+  if(options.replicationFactor !== undefined){
+    this.parameters.push(&#x27;replicationFactor=&#x27; + options.replicationFactor);
+  }
+  if(options.maxShardsPerNode !== undefined){
+    this.parameters.push(&#x27;maxShardsPerNode=&#x27; + options.maxShardsPerNode);
+  }
+  if(options.createNodeSet !== undefined){
+    if( typeof(options.createNodeSet) === &#x27;string&#x27;) {
+      this.parameters.push(&#x27;createNodeSet=&#x27; + options.createNodeSet);
+    }else{
+      this.parameters.push(&#x27;createNodeSet=&#x27; + options.createNodeSet.join());
+    }
+  }
+  if(options.createNodeSetShuffle !== undefined){
+    this.parameters.push(&#x27;createNodeSet.shuffle=&#x27; + options.createNodeSetShuffle);
+  }
+  if(options.collectionConfigName){
+    this.parameters.push(&#x27;collection.configName=&#x27; + options.collectionConfigName);
+  }
+  if(options.routerField){
+    this.parameters.push(&#x27;router.field=&#x27; + options.routerField);
+  }
+  if(options.autoAddReplicas !== undefined){
+    this.parameters.push(&#x27;autoAddReplicas=&#x27; + options.autoAddReplicas);
+  }
+  if(options.async){
+    this.parameters.push(&#x27;async=&#x27; + options.async);
+  }
+
+  return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.collection.prototype.createAlias" id="apidoc.element.solr-client.collection.prototype.createAlias">
+        function <span class="apidocSignatureSpan">solr-client.collection.prototype.</span>createAlias
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createAlias = function (options) {
+  var self = this;
+  this.parameters.push(&#x27;action=CREATEALIAS&#x27;);
+  if(options.name){
+    this.parameters.push(&#x27;name=&#x27; + options.name);
+  }
+  if(options.collections !== undefined){
+    if(typeof(options.collections) === &#x27;string&#x27;){
+      this.parameters.push(&#x27;collections=&#x27; + options.collections);
+    } else{
+      this.parameters.push(&#x27;collections=&#x27; + options.collections.join());
+    }
+  }
+
+  return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.collection.prototype.createShard" id="apidoc.element.solr-client.collection.prototype.createShard">
+        function <span class="apidocSignatureSpan">solr-client.collection.prototype.</span>createShard
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createShard = function (options) {
+  var self = this;
+  this.parameters.push(&#x27;action=CREATESHARD&#x27;);
+  if(options.collection){
+    this.parameters.push(&#x27;collection=&#x27; + options.collection);
+  }
+  if(options.shard){
+    this.parameters.push(&#x27;shard=&#x27; + options.shard);
+  }
+
+  return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.collection.prototype.delete" id="apidoc.element.solr-client.collection.prototype.delete">
+        function <span class="apidocSignatureSpan">solr-client.collection.prototype.</span>delete
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">delete = function (name) {
+  var self = this;
+  this.parameters.push(&#x27;action=DELETE&#x27;);
+  if(name){
+    this.parameters.push(&#x27;name=&#x27; + name);
+  }
+
+  return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.collection.prototype.deleteAlias" id="apidoc.element.solr-client.collection.prototype.deleteAlias">
+        function <span class="apidocSignatureSpan">solr-client.collection.prototype.</span>deleteAlias
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">deleteAlias = function (name) {
+  var self = this;
+  this.parameters.push(&#x27;action=DELETEALIAS&#x27;);
+  if(name){
+    this.parameters.push(&#x27;name=&#x27; + name);
+  }
+
+  return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.collection.prototype.deleteReplica" id="apidoc.element.solr-client.collection.prototype.deleteReplica">
+        function <span class="apidocSignatureSpan">solr-client.collection.prototype.</span>deleteReplica
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">deleteReplica = function (options) {
+  var self = this;
+  this.parameters.push(&#x27;action=DELETEREPLICA&#x27;);
+  if(options.collection){
+    this.parameters.push(&#x27;collection=&#x27; + options.collection);
+  }
+  if(options.shard){
+    this.parameters.push(&#x27;shard=&#x27; + options.shard);
+  }
+  if(options.replica){
+    this.parameters.push(&#x27;replica=&#x27; + options.replica);
+  }
+  if(options.onlyIfDown !== undefined){
+    this.parameters.push(&#x27;onlyIfDown=&#x27; + options.onlyIfDown);
+  }
+
+  return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.collection.prototype.deleteReplicaProp" id="apidoc.element.solr-client.collection.prototype.deleteReplicaProp">
+        function <span class="apidocSignatureSpan">solr-client.collection.prototype.</span>deleteReplicaProp
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">deleteReplicaProp = function (options) {
+  var self = this;
+  this.parameters.push(&#x27;action=DELETEREPLICAPROP&#x27;);
+  if(options.collection){
+    this.parameters.push(&#x27;collection=&#x27; + options.collection);
+  }
+  if(options.shard){
+    this.parameters.push(&#x27;shard=&#x27; + options.shard);
+  }
+  if(options.replica){
+    this.parameters.push(&#x27;replica=&#x27; + options.replica);
+  }
+  if(options.property){
+    this.parameters.push(&#x27;property=&#x27; + options.property);
+  }
+
+  return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.collection.prototype.deleteShard" id="apidoc.element.solr-client.collection.prototype.deleteShard">
+        function <span class="apidocSignatureSpan">solr-client.collection.prototype.</span>deleteShard
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">deleteShard = function (options) {
+  var self = this;
+  this.parameters.push(&#x27;action=DELETESHARD&#x27;);
+  if(options.collection){
+    this.parameters.push(&#x27;collection=&#x27; + options.collection);
+  }
+  if(options.shard){
+    this.parameters.push(&#x27;shard=&#x27; + options.shard);
+  }
+
+  return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.collection.prototype.list" id="apidoc.element.solr-client.collection.prototype.list">
+        function <span class="apidocSignatureSpan">solr-client.collection.prototype.</span>list
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">list = function () {
+  var self = this;
+  this.parameters.push(&#x27;action=LIST&#x27;);
+
+  return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.collection.prototype.migrate" id="apidoc.element.solr-client.collection.prototype.migrate">
+        function <span class="apidocSignatureSpan">solr-client.collection.prototype.</span>migrate
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">migrate = function (options) {
+  var self = this;
+  this.parameters.push(&#x27;action=MIGRATE&#x27;);
+  if(options.collection){
+    this.parameters.push(&#x27;collection=&#x27; + options.collection);
+  }
+  if(options.targetCollection){
+    this.parameters.push(&#x27;target.collection=&#x27; + options.targetCollection);
+  }
+  if(options.splitKey){
+    this.parameters.push(&#x27;split.key=&#x27; + options.splitKey);
+  }
+  if(options.forwardTimeout !== undefined){
+    this.parameters.push(&#x27;forward.timeout=&#x27; + options.forwardTimeout);
+  }
+  if(options.async){
+    this.parameters.push(&#x27;async=&#x27; + options.async);
+  }
+
+  return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.collection.prototype.overseerStatus" id="apidoc.element.solr-client.collection.prototype.overseerStatus">
+        function <span class="apidocSignatureSpan">solr-client.collection.prototype.</span>overseerStatus
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">overseerStatus = function () {
+  var self = this;
+  this.parameters.push(&#x27;action=OVERSEERSTATUS&#x27;);
+
+  return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.collection.prototype.rebalanceLeaders" id="apidoc.element.solr-client.collection.prototype.rebalanceLeaders">
+        function <span class="apidocSignatureSpan">solr-client.collection.prototype.</span>rebalanceLeaders
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rebalanceLeaders = function (options) {
+  var self = this;
+  this.parameters.push(&#x27;action=REBALANCELEADERS&#x27;);
+  if(options.collection){
+    this.parameters.push(&#x27;collection=&#x27; + options.collection);
+  }
+  if(options.maxAtOnce !== undefined){
+    this.parameters.push(&#x27;maxAtOnce=&#x27; + options.maxAtOnce);
+  }
+  if(options.maxWaitSeconds !== undefined){
+    this.parameters.push(&#x27;maxWaitSeconds=&#x27; + options.maxWaitSeconds);
+  }
+
+  return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.collection.prototype.reload" id="apidoc.element.solr-client.collection.prototype.reload">
+        function <span class="apidocSignatureSpan">solr-client.collection.prototype.</span>reload
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">reload = function (name) {
+  var self = this;
+  this.parameters.push(&#x27;action=RELOAD&#x27;);
+  if(name){
+    this.parameters.push(&#x27;name=&#x27; + name);
+  }
+
+  return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.collection.prototype.removeRole" id="apidoc.element.solr-client.collection.prototype.removeRole">
+        function <span class="apidocSignatureSpan">solr-client.collection.prototype.</span>removeRole
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">removeRole = function (options) {
+  var self = this;
+  this.parameters.push(&#x27;action=REMOVEROLE&#x27;);
+  if(options.role){
+    this.parameters.push(&#x27;role=&#x27; + options.role);
+  }
+  if(options.node){
+    this.parameters.push(&#x27;node=&#x27; + options.node);
+  }
+
+  return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.collection.prototype.requestStatus" id="apidoc.element.solr-client.collection.prototype.requestStatus">
+        function <span class="apidocSignatureSpan">solr-client.collection.prototype.</span>requestStatus
+        <span class="apidocSignatureSpan">(requestid)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">requestStatus = function (requestid) {
+  var self = this;
+  this.parameters.push(&#x27;action=REQUESTSTATUS&#x27;);
+  if(requestid){
+    this.parameters.push(&#x27;requestid=&#x27; + requestid);
+  }
+
+  return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.collection.prototype.set" id="apidoc.element.solr-client.collection.prototype.set">
+        function <span class="apidocSignatureSpan">solr-client.collection.prototype.</span>set
+        <span class="apidocSignatureSpan">(parameter)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">set = function (parameter){
+  var self = this;
+  this.parameters.push(parameter);
+  return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.collection.prototype.splitShard" id="apidoc.element.solr-client.collection.prototype.splitShard">
+        function <span class="apidocSignatureSpan">solr-client.collection.prototype.</span>splitShard
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">splitShard = function (options) {
+  var self = this;
+  this.parameters.push(&#x27;action=SPLITSHARD&#x27;);
+  if(options.collection){
+    this.parameters.push(&#x27;collection=&#x27; + options.collection);
+  }
+  if(options.shard){
+    this.parameters.push(&#x27;shard=&#x27; + options.shard);
+  }
+  if(options.ranges !== undefined){
+    if(typeof(ranges) === &#x27;string&#x27;){
+      this.parameters.push(&#x27;ranges=&#x27; + options.ranges);
+    }else{
+      this.parameters.push(&#x27;ranges=&#x27; + options.ranges.join());
+    }
+  }
+  if(options.splitKey){
+    this.parameters.push(&#x27;split.key=&#x27; + options.splitKey);
+  }
+  if(options.async){
+    this.parameters.push(&#x27;async=&#x27; + options.async);
+  }
+
+  return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.solr-client.format" id="apidoc.module.solr-client.format">module solr-client.format</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.format.dateISOify" id="apidoc.element.solr-client.format.dateISOify">
+        function <span class="apidocSignatureSpan">solr-client.format.</span>dateISOify
+        <span class="apidocSignatureSpan">(obj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function dateISOify(obj){
+   if( obj instanceof Array ){
+      for(var i = 0; i &#x3c; obj.length; i++){
+         obj[i] = dateISOify(obj[i]);
+      }
+   }else if(obj instanceof Object &#x26;&#x26; !(obj instanceof Date) ){
+      for(var key in obj){
+         if( obj[key] instanceof Date ) obj[key] = toISOString(obj[key]);
+      }
+   }else{
+      if( obj instanceof Date ) obj = toISOString(obj);
+   }
+   return obj;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * query.q({ &#x27;*&#x27; : &#x27;*&#x27; }).rangeFilter({ field : &#x27;id&#x27;, start : 100, end : 200})
+ * // also works
+ * query.q({ &#x27;*&#x27; : &#x27;*&#x27; }).rangeFilter([{ field : &#x27;id&#x27;, start : 100, end : 200},{ field : &#x27;date
+&#x27;, start : new Date(), end : new Date() - 3600}]);
+ */
+
+Query.prototype.rangeFilter = function(options){
+var self = this;
+options = format.<span class="apidocCodeKeywordSpan">dateISOify</span>(options);
+var parameter = &#x27;fq=&#x27;;
+if(Array.isArray(options)){
+  parameter += &#x22;(&#x22;;
+   var filters = options.map(function(option){
+      var key = option.field;
+      var filter = {};
+      filter[key] = &#x27;[&#x27; + encodeURIComponent(option.start) + &#x27;%20TO%20&#x27; + encodeURIComponent(option.end) + &#
+x27;]&#x27;;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.format.escapeSpecialChars" id="apidoc.element.solr-client.format.escapeSpecialChars">
+        function <span class="apidocSignatureSpan">solr-client.format.</span>escapeSpecialChars
+        <span class="apidocSignatureSpan">(s)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function escapeSpecialChars(s){
+  return s.replace(/([\+\-!\(\)\{\}\[\]\^&#x22;~\*\?:\\])/g, function(match) {
+    return &#x27;\\&#x27; + match;
+  })
+  .replace(/&#x26;&#x26;/g, &#x27;\\&#x26;\\&#x26;&#x27;)
+  .replace(/\|\|/g, &#x27;\\|\\|&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var client = solr.createClient({
+ get_max_request_entity_size: 1000
+});
+```
+
+##Migration between 0.4.x and 0.5.x
+
+The only breaking change introduced in `0.5.x` is introduced in this commit [3cbc7fc6cf631f019a4626913c0a4b616092133b](https://github
+.com/lbdremy/solr-node-client/commit/3cbc7fc6cf631f019a4626913c0a4b616092133b) which remove escaping of the Solr special characters
+ in some of the methods of the `Query` class i.e in `Query#rangeFilter`, `Query#matchFilter`, `Query#group`, `Query#facet`, `Query
+#mlt` if you were relying on this behavior just wrap the arguments you passed to those methods into the [`solr.<span class="apidocCodeKeywordSpan
+">escapeSpecialChars</span>(arg)`](https://github.com/lbdremy/solr-node-client/blob/master/lib/solr.js#L605) method.
+
+For example, for some weird reason you wanted to escape the special char `*`, don&#x27;t ask me ;)
+
+```js
+var query = client.createQuery();
+query.q({ &#x27;*&#x27; : &#x27;*&#x27; }).rangeFilter({ field : &#x27;id&#x27;, start : 100, end : &#x27;*&#x27;})
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.format.stringify" id="apidoc.element.solr-client.format.stringify">
+        function <span class="apidocSignatureSpan">solr-client.format.</span>stringify
+        <span class="apidocSignatureSpan">(obj, sep, eq, name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function stringify(obj, sep, eq, name) {
+  sep = sep || &#x27;&#x26;&#x27;;
+  eq = eq || &#x27;=&#x27;;
+  obj = (obj === null) ? undefined : obj;
+
+  switch (typeof obj) {
+    case &#x27;object&#x27;:
+      return Object.keys(obj).map(function(k) {
+        if (Array.isArray(obj[k])) {
+          return obj[k].map(function(v) {
+            return stringifyPrimitive(k) +
+                   eq +
+                   stringifyPrimitive(v);
+          }).join(sep);
+        } else {
+          return stringifyPrimitive(k) +
+                 eq +
+                 stringifyPrimitive(obj[k]);
+        }
+      }).join(sep);
+
+    default:
+      if (!name) return &#x27;&#x27;;
+      return stringifyPrimitive(name) + eq +
+             stringifyPrimitive(obj);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Query.prototype.q = function(q){
+  var self = this;
+  var parameter =&#x27;q=&#x27;;
+  if ( typeof(q) === &#x27;string&#x27; ){
+     parameter += encodeURIComponent(q);
+  }else{
+     parameter += querystring.<span class="apidocCodeKeywordSpan">stringify</span>(q, &#x27;%20AND%20&#x27;,&#x27;:&#x27;);
+  }
+  this.parameters.push(parameter);
+  return self;
+}
+
+/**
+*  Set the default query operator
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.format.toISOString" id="apidoc.element.solr-client.format.toISOString">
+        function <span class="apidocSignatureSpan">solr-client.format.</span>toISOString
+        <span class="apidocSignatureSpan">(date)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toISOString(date) {
+   return (date &#x26;&#x26; !isNaN(date.getTime())) ? date.toISOString() : null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ *
+ * @param {Date}
+ *
+ * @return {null|String}
+ * @api private
+ */
+function toISOString(date) {
+   return (date &#x26;&#x26; !isNaN(date.getTime())) ? date.<span class="apidocCodeKeywordSpan">toISOString</span>() : null;
+};
+
+/**
+ * Expose `stringify()`
+ */
+
+exports.stringify = stringify;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.solr-client.query" id="apidoc.module.solr-client.query">module solr-client.query</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.query.query" id="apidoc.element.solr-client.query.query">
+        function <span class="apidocSignatureSpan">solr-client.</span>query
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Query(options){
+   this.solrVersion = (options &#x26;&#x26; options.solrVersion) || undefined;
+   this.parameters = [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Client.prototype.query = function(){
+return new Query(this.options);
+}
+
+/**
+ * Create an instance of `Query`
+ * NOTE: This method will be deprecated in the v0.6 release. Please use `Client.<span class="apidocCodeKeywordSpan">query</span>()`
+instead.
+ *
+ * @return {Query}
+ * @api public
+ */
+
+Client.prototype.createQuery = function(){
+return new Query(this.options);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.solr-client.query.prototype" id="apidoc.module.solr-client.query.prototype">module solr-client.query.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.query.prototype.bf" id="apidoc.element.solr-client.query.prototype.bf">
+        function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>bf
+        <span class="apidocSignatureSpan">(functions)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bf = function (functions){
+   var self = this;
+   var parameter = &#x27;bf=&#x27; + functions;
+   this.parameters.push(parameter);
+   return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.query.prototype.boost" id="apidoc.element.solr-client.query.prototype.boost">
+        function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>boost
+        <span class="apidocSignatureSpan">(functions)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">boost = function (functions){
+   var self = this;
+   var parameter = &#x27;boost=&#x27; + encodeURIComponent(functions);
+   this.parameters.push(parameter);
+   return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.query.prototype.bq" id="apidoc.element.solr-client.query.prototype.bq">
+        function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>bq
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bq = function (options){
+   var self = this;
+   var parameter = &#x27;bq=&#x27; ;
+   parameter += querystring.stringify(options, &#x27;%20&#x27; , &#x27;^&#x27;);
+   this.parameters.push(parameter);
+   return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.query.prototype.build" id="apidoc.element.solr-client.query.prototype.build">
+        function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>build
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">build = function (){
+   return this.parameters.join(&#x27;&#x26;&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Client.prototype.get = function(handler,query,callback){
+
+var parameters = &#x27;&#x27;;
+if(typeof query === &#x27;function&#x27;){
+   callback = query;
+}else if((query instanceof Query) || (query instanceof Collection)){
+   parameters += query.<span class="apidocCodeKeywordSpan">build</span>();
+}else if(typeof query === &#x27;object&#x27;){
+   parameters += querystring.stringify(query);
+}else if(typeof query === &#x27;string&#x27;){
+   parameters += query;
+}
+var pathArray;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.query.prototype.cursorMark" id="apidoc.element.solr-client.query.prototype.cursorMark">
+        function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>cursorMark
+        <span class="apidocSignatureSpan">(mark)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">cursorMark = function (mark){
+   var self = this;
+   mark = mark || &#x22;*&#x22;;
+   var parameter = &#x27;cursorMark=&#x27; + mark ;
+   this.parameters.push(parameter);
+   return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.query.prototype.debugQuery" id="apidoc.element.solr-client.query.prototype.debugQuery">
+        function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>debugQuery
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">debugQuery = function (){
+   var self = this;
+   this.parameters.push(&#x27;debugQuery=true&#x27;);
+   return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.query.prototype.defType" id="apidoc.element.solr-client.query.prototype.defType">
+        function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>defType
+        <span class="apidocSignatureSpan">(type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">defType = function (type){
+   var self = this;
+   var parameter = &#x27;defType=&#x27; + type;
+   this.parameters.push(parameter);
+   return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+*
+* @return {Query}
+* @api public
+*/
+
+Query.prototype.dismax = function(){
+  var self = this;
+  this.<span class="apidocCodeKeywordSpan">defType</span>(&#x27;dismax&#x27;);
+  return self;
+}
+
+/*!
+* EDisMax parameters
+* do not forget to use `.edismax()` when using these parameters
+*/
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.query.prototype.df" id="apidoc.element.solr-client.query.prototype.df">
+        function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>df
+        <span class="apidocSignatureSpan">(df)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">df = function (df) {
+    var self = this;
+    var parameter = &#x27;df=&#x27;;
+    parameter += df;
+    this.parameters.push(parameter);
+    return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+##Features
+
+###Latest (0.6.0)
+
+- Solr5 Query-Highlighting support through StandardHighlighter (@LukeTavern) (https://github.com/lbdremy/solr-node-client/pull/144
+)
+- Experimental support for SolrCloud collections administration (@LukeTavern) (https://github.com/lbdremy/solr-node-client/issues
+/138)
+- Support for large query through POST via configurable automatic switch (@kfitzgerald) (https://github.com/lbdremy/solr-node-client
+/pull/129)
+- Set Default Field (query.<span class="apidocCodeKeywordSpan">df</span>()) (@cbarrientos-ias) (https://github.com/lbdremy/solr-
+node-client/pull/137)
+- Adds support for facet.pivot and facet.pivot.mincount (@nicolasembleton) (https://github.com/lbdremy/solr-node-client/issues/146
+)
+
+Noticeable change: You can now pass a solrVersion to the Client initialization so it will activate features that  are only supported
+by your version or higher. Be sure to check the documentation
+
+###0.5.0
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.query.prototype.dismax" id="apidoc.element.solr-client.query.prototype.dismax">
+        function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>dismax
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">dismax = function (){
+   var self = this;
+   this.defType(&#x27;dismax&#x27;);
+   return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+   this.parameters.push(&#x27;mlt.qf=&#x27; + parameter);
+ }
+ return self;
+}
+
+/*!
+* DisMax parameters
+* do not forget to use `.<span class="apidocCodeKeywordSpan">dismax</span>()` when using these parameters
+*/
+
+/**
+* Use the DisMax query parser
+*
+* @return {Query}
+* @api public
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.query.prototype.edismax" id="apidoc.element.solr-client.query.prototype.edismax">
+        function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>edismax
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">edismax = function (){
+   var self = this;
+   this.defType(&#x27;edismax&#x27;);
+   return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  var self = this;
+  this.defType(&#x27;dismax&#x27;);
+  return self;
+}
+
+/*!
+* EDisMax parameters
+* do not forget to use `.<span class="apidocCodeKeywordSpan">edismax</span>()` when using these parameters
+*/
+
+/**
+* Use the EDisMax query parser
+*
+* @return {Query}
+* @api public
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.query.prototype.facet" id="apidoc.element.solr-client.query.prototype.facet">
+        function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>facet
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">facet = function (options){
+   var self = this;
+   if(options.on === false){
+      this.parameters.push(&#x27;facet=false&#x27;);
+   }else{
+      this.parameters.push(&#x27;facet=true&#x27;);
+   }
+   if(options.query){
+      this.parameters.push(&#x27;facet.query=&#x27; + encodeURIComponent(options.query))
+   }
+   if(options.field){
+     options.field = arrayUtils.toArray(options.field);
+     options.field.forEach(function(field) {
+       self.parameters.push(&#x27;facet.field=&#x27; + field);
+     });
+   }
+   if(options.prefix){
+      this.parameters.push(&#x27;facet.prefix=&#x27; + encodeURIComponent(options.prefix))
+   }
+   if(options.sort){
+      this.parameters.push(&#x27;facet.sort=&#x27; + encodeURIComponent(options.sort))
+   }
+   if(options.limit !== undefined){
+      this.parameters.push(&#x27;facet.limit=&#x27; + options.limit);
+   }
+   if(options.offset !== undefined){
+      this.parameters.push(&#x27;facet.offset=&#x27; + options.offset);
+   }
+   if(options.mincount !== undefined){
+      this.parameters.push(&#x27;facet.mincount=&#x27; + options.mincount);
+   }
+   if(options.missing !== undefined){
+      this.parameters.push(&#x27;facet.missing=&#x27; + options.missing);
+   }
+   if(options.method){
+      this.parameters.push(&#x27;facet.method=&#x27; + options.method);
+   }
+
+   // Only supported with version 4.0 and above
+   if(this.solrVersion &#x26;&#x26; (versionUtils.version(this.solrVersion) &#x3e;= versionUtils.Solr4_0)) {
+     if(options.pivot){
+       options.field = arrayUtils.toArray(options.pivot.fields);
+       options.field.forEach(function(field) {
+         self.parameters.push(&#x27;facet.pivot=&#x27; + field);
+       });
+     }
+     if(options.pivot.mincount) {
+       this.parameters.push(&#x27;facet.pivot.mincount=&#x27; + options.pivot.mincount);
+     }
+   }
+
+   return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.query.prototype.fl" id="apidoc.element.solr-client.query.prototype.fl">
+        function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>fl
+        <span class="apidocSignatureSpan">(fields)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fl = function (fields){
+   var self = this;
+   var parameter = &#x27;fl=&#x27;;
+   if(typeof(fields) === &#x27;string&#x27;){
+      parameter += fields;
+   }else{
+      parameter += fields.join(&#x27;,&#x27;);
+   }
+   this.parameters.push(parameter);
+   return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.query.prototype.group" id="apidoc.element.solr-client.query.prototype.group">
+        function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>group
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">group = function (options){
+   var self = this;
+   if(options.on === false){
+      this.parameters.push(&#x27;group=false&#x27;);
+   }else{
+      this.parameters.push(&#x27;group=true&#x27;);
+   }
+   if( options.field ){
+      options.field = arrayUtils.toArray(options.field);
+      options.field.forEach(function(field){
+        self.parameters.push(&#x27;group.field=&#x27; + field);
+      });
+   }
+   if( options.limit !== undefined){
+      this.parameters.push(&#x27;group.limit=&#x27; + options.limit);
+   }
+   if( options.offset !== undefined){
+      this.parameters.push(&#x27;group.offset=&#x27; + options.offset);
+   }
+   if( options.sort ){
+      this.parameters.push(&#x27;group.sort=&#x27; + encodeURIComponent(options.sort));
+   }
+   if( options.format ){
+      this.parameters.push(&#x27;group.format=&#x27; + encodeURIComponent(options.format));
+   }
+   if( options.main !== undefined){
+      this.parameters.push(&#x27;group.main=&#x27; + options.main);
+   }
+   if( options.ngroups !== undefined){
+      this.parameters.push(&#x27;group.ngroups=&#x27; + options.ngroups);
+   }
+   if( options.truncate !== undefined){
+      this.parameters.push(&#x27;group.truncate=&#x27; + options.truncate);
+   }
+   if( options.cache !== undefined){
+      this.parameters.push(&#x27;group.cache.percent=&#x27; + options.cache);
+   }
+   return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+*
+* @return {Query}
+* @api public
+*/
+
+Query.prototype.groupBy = function(field){
+  var self = this;
+  this.<span class="apidocCodeKeywordSpan">group</span>({
+     &#x27;field&#x27;: field
+  });
+  return self;
+}
+
+/**
+* Group documents using field collapsing or result grouping feature.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.query.prototype.groupBy" id="apidoc.element.solr-client.query.prototype.groupBy">
+        function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>groupBy
+        <span class="apidocSignatureSpan">(field)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">groupBy = function (field){
+   var self = this;
+   this.group({
+      &#x27;field&#x27;: field
+   });
+   return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.query.prototype.hl" id="apidoc.element.solr-client.query.prototype.hl">
+        function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>hl
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hl = function (options){
+   var self = this;
+   if(options.on === false){
+      this.parameters.push(&#x27;hl=false&#x27;);
+   }else{
+      this.parameters.push(&#x27;hl=true&#x27;);
+   }
+   if(options.q !== undefined){
+      if ( typeof(options.q) === &#x27;string&#x27; ){
+         this.parameters.push(&#x27;hl.q=&#x27; + encodeURIComponent(options.q));
+      }else{
+         this.parameters.push(&#x27;hl.q=&#x27; + querystring.stringify(options.q, &#x27;%20AND%20&#x27;,&#x27;:&#x27;));
+      }
+   }
+   if(options.qparser !== undefined){
+      this.parameters.push(&#x27;hl.qparser=&#x27; + encodeURIComponent(options.qparser));
+   }
+   if(options.fl !== undefined){
+      if ( typeof(options.fl) === &#x27;string&#x27; ){
+         this.parameters.push(&#x27;hl.fl=&#x27; + encodeURIComponent(options.fl));
+      }else{
+         this.parameters.push(&#x27;hl.fl=&#x27; + options.fl.join(&#x27;,&#x27;));
+      }
+   }
+   if(options.snippets !== undefined){
+      this.parameters.push(&#x27;hl.snippets=&#x27; + encodeURIComponent(options.snippets));
+   }
+   if(options.fragsize !== undefined){
+      this.parameters.push(&#x27;hl.fragsize=&#x27; + encodeURIComponent(options.fragsize));
+   }
+   if(options.mergeContiguous !== undefined){
+      this.parameters.push(&#x27;hl.mergeContiguous=&#x27; + encodeURIComponent(options.mergeContiguous));
+   }
+   if(options.requireFieldMatch !== undefined){
+      this.parameters.push(&#x27;hl.requireFieldMatch=&#x27; + encodeURIComponent(options.requireFieldMatch));
+   }
+   if(options.maxAnalyzedChars !== undefined){
+      this.parameters.push(&#x27;hl.maxAnalyzedChars=&#x27; + encodeURIComponent(options.maxAnalyzedChars));
+   }
+   if(options.maxMultiValuedToExamine !== undefined){
+      this.parameters.push(&#x27;hl.maxMultiValuedToExamine=&#x27; + encodeURIComponent(options.maxMultiValuedToExamine));
+   }
+   if(options.maxMultiValuedToMatch !== undefined){
+      this.parameters.push(&#x27;hl.maxMultiValuedToMatch=&#x27; + encodeURIComponent(options.maxMultiValuedToMatch));
+   }
+   if(options.alternateField){
+      this.parameters.push(&#x27;hl.alternateField=&#x27; + encodeURIComponent(options.alternateField));
+   }
+   if(options.maxAlternateFieldLength !== undefined){
+      this.parameters.push(&#x27;hl.maxAlternateFieldLength=&#x27; + encodeURIComponent(options.maxAlternateFieldLength));
+   }
+   if(options.formatter){
+      this.parameters.push(&#x27;hl.formatter=&#x27; + encodeURIComponent(options.formatter));
+   }
+   if(options.simplePre){
+      this.parameters.push(&#x27;hl.simple.pre=&#x27; + encodeURIComponent(options.simplePre));
+   }else{
+      this.parameters.push(&#x27;hl.simple.pre=&#x3c;em&#x3e;&#x27;);
+   }
+   if(options.simplePost){
+      this.parameters.push(&#x27;hl.simple.post=&#x27; + encodeURIComponent(options.simplePost));
+   }else{
+      this.parameters.push(&#x27;hl.simple.post=&#x3c;%2Fem&#x3e;&#x27;);
+   }
+   if(options.fragmenter){
+      this.parameters.push(&#x27;hl.fragmenter=&#x27; + encodeURIComponent(options.fragmenter));
+   }
+   if(options.highlightMultiTerm !== undefined){
+      this.parameters.push(&#x27;hl.highlightMultiTerm=&#x27; + encodeURIComponent(options.highlightMultiTerm));
+   }
+   if(options.usePhraseHighlighter !== undefined){
+      this.parameters.push(&#x27;hl.usePhraseHighlighter=&#x27; + encodeURIComponent(options.usePhraseHighlighter));
+   }
+   if(options.regexSlop !== undefined){
+      this.parameters.push(&#x27;hl.regex.slop=&#x27; + encodeURIComponent(options.regexSlop));
+   }
+   if(options.regexPattern){
+      this.parameters.push(&#x27;hl.regex.pattern=&#x27; + encodeURIComponent(options.regexPattern));
+   }
+   if(options.regexMaxAnalyzedChars){
+      this.parameters.push(&#x27;hl.regex.maxAnalyzedChars=&#x27; + encodeURIComponent(options.regexMaxAnalyzedChars));
+   }
+   if(options.preserveMulti !== undefined){
+      this.parameters.push(&#x27;hl.preserveMulti=&#x27; + encodeURIComponent(options.preserveMulti));
+   }
+   if(options.payloads !== undefined){
+      this.parameters.push(&#x27;hl.payloads=&#x27; + encodeURIComponent(options.payloads));
+   }
+
+   return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.query.prototype.matchFilter" id="apidoc.element.solr-client.query.prototype.matchFilter">
+        function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>matchFilter
+        <span class="apidocSignatureSpan">(field, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">matchFilter = function (field, value){
+   var self = this;
+   value = format.dateISOify(value);
+   var parameter = &#x27;fq=&#x27;;
+   parameter += field + &#x27;:&#x27; + encodeURIComponent(value);
+   this.parameters.push(parameter);
+   return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param {String|Number|Date} value - value of the field that must match
+ *
+ * @return {Query}
+ * @api public
+ *
+ * @example
+ * var query = client.createQuery();
+ * query.q({ &#x27;*&#x27; : &#x27;*&#x27; }).<span class="apidocCodeKeywordSpan">matchFilter</span>(&#x27;id&#x27;, 100)
+ */
+
+Query.prototype.matchFilter = function(field,value){
+var self = this;
+value = format.dateISOify(value);
+var parameter = &#x27;fq=&#x27;;
+parameter += field + &#x27;:&#x27; + encodeURIComponent(value);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.query.prototype.mlt" id="apidoc.element.solr-client.query.prototype.mlt">
+        function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>mlt
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mlt = function (options){
+  var self = this;
+  if(options.on === false){
+    this.parameters.push(&#x27;mlt=false&#x27;);
+  }else{
+    this.parameters.push(&#x27;mlt=true&#x27;);
+  }
+  if(options.fl){
+    if(options.fl instanceof Array) options.fl = options.fl.join(&#x27;,&#x27;);
+    this.parameters.push(&#x27;mlt.fl=&#x27; + encodeURIComponent(options.fl))
+  }
+  if(options.count !== undefined){
+    this.parameters.push(&#x27;mlt.count=&#x27; + options.count)
+  }
+  if(options.mintf !== undefined){
+    this.parameters.push(&#x27;mlt.mintf=&#x27; + options.mintf)
+  }
+  if(options.mindf !== undefined){
+    this.parameters.push(&#x27;mlt.mindf=&#x27; + options.mindf);
+  }
+  if(options.minwl !== undefined){
+    this.parameters.push(&#x27;mlt.minwl=&#x27; + options.minwl)
+  }
+  if(options.maxwl !== undefined ){
+    this.parameters.push(&#x27;mlt.maxwl=&#x27; + options.maxwl)
+  }
+  if(options.maxqt !== undefined){
+    this.parameters.push(&#x27;mlt.maxqt=&#x27; + options.maxqt)
+  }
+  if(options.maxntp !== undefined){
+    this.parameters.push(&#x27;mlt.maxntp=&#x27; + options.maxntp);
+  }
+  if(options.boost !== undefined){
+    this.parameters.push(&#x27;mlt.boost=&#x27; + options.boost);
+  }
+  if(options.qf){
+    if( typeof options.qf === &#x27;object&#x27;){
+      var parameter = querystring.stringify(options.qf, &#x27;%20&#x27; , &#x27;^&#x27;);;
+    }else{
+      var parameter = encodeURIComponent(options.qf);
+    }
+    this.parameters.push(&#x27;mlt.qf=&#x27; + parameter);
+  }
+  return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.query.prototype.mm" id="apidoc.element.solr-client.query.prototype.mm">
+        function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>mm
+        <span class="apidocSignatureSpan">(minimum)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mm = function (minimum){
+   var self = this;
+   var parameter = &#x27;mm=&#x27; + minimum;
+   this.parameters.push(parameter);
+   return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param {String|Number} minimum - number or percent of clauses that must match
+ *
+ * @return {Query}
+ * @api public
+ *
+ * @example
+ * var query = client.createQuery();
+ * query.<span class="apidocCodeKeywordSpan">mm</span>(2); // or query.mm(&#x27;75%&#x27;);
+ */
+
+Query.prototype.mm = function(minimum){
+var self = this;
+var parameter = &#x27;mm=&#x27; + minimum;
+this.parameters.push(parameter);
+return self;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.query.prototype.pf" id="apidoc.element.solr-client.query.prototype.pf">
+        function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>pf
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pf = function (options){
+   var self = this;
+   var parameter = &#x27;pf=&#x27; ;
+   parameter += querystring.stringify(options, &#x27;%20&#x27; , &#x27;^&#x27;);
+   this.parameters.push(parameter);
+   return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.query.prototype.ps" id="apidoc.element.solr-client.query.prototype.ps">
+        function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>ps
+        <span class="apidocSignatureSpan">(slop)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ps = function (slop){
+   var self = this;
+   var parameter = &#x27;ps=&#x27; + slop;
+   this.parameters.push(parameter);
+   return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.query.prototype.q" id="apidoc.element.solr-client.query.prototype.q">
+        function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>q
+        <span class="apidocSignatureSpan">(q)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">q = function (q){
+   var self = this;
+   var parameter =&#x27;q=&#x27;;
+   if ( typeof(q) === &#x27;string&#x27; ){
+      parameter += encodeURIComponent(q);
+   }else{
+      parameter += querystring.stringify(q, &#x27;%20AND%20&#x27;,&#x27;:&#x27;);
+   }
+   this.parameters.push(parameter);
+   return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+The only breaking change introduced in `0.5.x` is introduced in this commit [3cbc7fc6cf631f019a4626913c0a4b616092133b](https://github
+.com/lbdremy/solr-node-client/commit/3cbc7fc6cf631f019a4626913c0a4b616092133b) which remove escaping of the Solr special characters
+ in some of the methods of the `Query` class i.e in `Query#rangeFilter`, `Query#matchFilter`, `Query#group`, `Query#facet`, `Query
+#mlt` if you were relying on this behavior just wrap the arguments you passed to those methods into the [`solr.escapeSpecialChars
+(arg)`](https://github.com/lbdremy/solr-node-client/blob/master/lib/solr.js#L605) method.
+
+For example, for some weird reason you wanted to escape the special char `*`, don&#x27;t ask me ;)
+
+```js
+var query = client.createQuery();
+query.<span class="apidocCodeKeywordSpan">q</span>({ &#x27;*&#x27; : &#x27;*&#x27; }).rangeFilter({ field : &#x27;id&#x27;, start
+ : 100, end : &#x27;*&#x27;})
+```
+
+You still can:
+
+```js
+var query = client.createQuery();
+query.q({ &#x27;*&#x27; : &#x27;*&#x27; }).rangeFilter({ field : &#x27;id&#x27;, start : 100, end : solr.escapeSpecialChars(&#x27
+;*&#x27;)})
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.query.prototype.qf" id="apidoc.element.solr-client.query.prototype.qf">
+        function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>qf
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">qf = function (options){
+   var self = this;
+   var parameter = &#x27;qf=&#x27; ;
+   parameter += querystring.stringify(options, &#x27;%20&#x27; , &#x27;^&#x27;);
+   this.parameters.push(parameter);
+   return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param {Object} options -
+ *
+ * @return {Query}
+ * @api public
+ *
+ * @example
+ * var query = client.createQuery();
+ * query.<span class="apidocCodeKeywordSpan">qf</span>({title : 2.2, description : 0.5 });
+ */
+
+Query.prototype.qf = function(options){
+var self = this;
+var parameter = &#x27;qf=&#x27; ;
+parameter += querystring.stringify(options, &#x27;%20&#x27; , &#x27;^&#x27;);
+this.parameters.push(parameter);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.query.prototype.qop" id="apidoc.element.solr-client.query.prototype.qop">
+        function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>qop
+        <span class="apidocSignatureSpan">(op)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">qop = function (op){
+    var self = this;
+    var parameter =&#x27;q.op=&#x27;;
+    parameter += op;
+    this.parameters.push(parameter);
+    return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.query.prototype.qs" id="apidoc.element.solr-client.query.prototype.qs">
+        function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>qs
+        <span class="apidocSignatureSpan">(slop)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">qs = function (slop){
+   var self = this;
+   var parameter = &#x27;qs=&#x27; + slop;
+   this.parameters.push(parameter);
+   return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.query.prototype.qt" id="apidoc.element.solr-client.query.prototype.qt">
+        function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>qt
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">qt = function (name){
+  var self = this;
+  var parameter = &#x27;qt=&#x27; + name;
+  this.parameters.push(parameter);
+  return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.query.prototype.rangeFilter" id="apidoc.element.solr-client.query.prototype.rangeFilter">
+        function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>rangeFilter
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rangeFilter = function (options){
+   var self = this;
+   options = format.dateISOify(options);
+   var parameter = &#x27;fq=&#x27;;
+   if(Array.isArray(options)){
+     parameter += &#x22;(&#x22;;
+      var filters = options.map(function(option){
+         var key = option.field;
+         var filter = {};
+         filter[key] = &#x27;[&#x27; + encodeURIComponent(option.start) + &#x27;%20TO%20&#x27; + encodeURIComponent(option.end) + &#x27;]&#x27;;
+         return format.stringify(filter, &#x27;&#x27;,&#x27;:&#x27;);
+      });
+      parameter += filters.join(&#x27;%20AND%20&#x27;);
+      parameter += &#x22;)&#x22;;
+   }else{
+      var key = options.field;
+      var filter = {};
+      filter[key] = &#x27;[&#x27; + encodeURIComponent(options.start) + &#x27;%20TO%20&#x27; + encodeURIComponent(options.end) + &#x27;]&#x27;;
+      parameter += format.stringify(filter, &#x27;&#x27;,&#x27;:&#x27;);
+   }
+   this.parameters.push(parameter);
+   return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+The only breaking change introduced in `0.5.x` is introduced in this commit [3cbc7fc6cf631f019a4626913c0a4b616092133b](https://github
+.com/lbdremy/solr-node-client/commit/3cbc7fc6cf631f019a4626913c0a4b616092133b) which remove escaping of the Solr special characters
+ in some of the methods of the `Query` class i.e in `Query#rangeFilter`, `Query#matchFilter`, `Query#group`, `Query#facet`, `Query
+#mlt` if you were relying on this behavior just wrap the arguments you passed to those methods into the [`solr.escapeSpecialChars
+(arg)`](https://github.com/lbdremy/solr-node-client/blob/master/lib/solr.js#L605) method.
+
+For example, for some weird reason you wanted to escape the special char `*`, don&#x27;t ask me ;)
+
+```js
+var query = client.createQuery();
+query.q({ &#x27;*&#x27; : &#x27;*&#x27; }).<span class="apidocCodeKeywordSpan">rangeFilter</span>({ field : &#x27;id&#x27;, start
+ : 100, end : &#x27;*&#x27;})
+```
+
+You still can:
+
+```js
+var query = client.createQuery();
+query.q({ &#x27;*&#x27; : &#x27;*&#x27; }).rangeFilter({ field : &#x27;id&#x27;, start : 100, end : solr.escapeSpecialChars(&#x27
+;*&#x27;)})
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.query.prototype.requestHandler" id="apidoc.element.solr-client.query.prototype.requestHandler">
+        function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>requestHandler
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">requestHandler = function (name){
+  var self = this;
+  var parameter = &#x27;qt=&#x27; + name;
+  this.parameters.push(parameter);
+  return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.query.prototype.restrict" id="apidoc.element.solr-client.query.prototype.restrict">
+        function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>restrict
+        <span class="apidocSignatureSpan">(fields)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">restrict = function (fields){
+   var self = this;
+   var parameter = &#x27;fl=&#x27;;
+   if(typeof(fields) === &#x27;string&#x27;){
+      parameter += fields;
+   }else{
+      parameter += fields.join(&#x27;,&#x27;);
+   }
+   this.parameters.push(parameter);
+   return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.query.prototype.rows" id="apidoc.element.solr-client.query.prototype.rows">
+        function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>rows
+        <span class="apidocSignatureSpan">(rows)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rows = function (rows){
+   var self = this;
+   var parameter = &#x27;rows=&#x27; + rows ;
+   this.parameters.push(parameter);
+   return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.query.prototype.set" id="apidoc.element.solr-client.query.prototype.set">
+        function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>set
+        <span class="apidocSignatureSpan">(parameter)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">set = function (parameter){
+   var self = this;
+   this.parameters.push(parameter);
+   return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.query.prototype.sort" id="apidoc.element.solr-client.query.prototype.sort">
+        function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>sort
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sort = function (options){
+   var self = this;
+   var parameter = &#x27;sort=&#x27;;
+   parameter += querystring.stringify(options, &#x27;,&#x27; , &#x27;%20&#x27;);
+   this.parameters.push(parameter);
+   return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.query.prototype.start" id="apidoc.element.solr-client.query.prototype.start">
+        function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>start
+        <span class="apidocSignatureSpan">(start)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">start = function (start){
+   var self = this;
+   var parameter = &#x27;start=&#x27; + start ;
+   this.parameters.push(parameter);
+   return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.query.prototype.tie" id="apidoc.element.solr-client.query.prototype.tie">
+        function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>tie
+        <span class="apidocSignatureSpan">(tiebreaker)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">tie = function (tiebreaker){
+   var self = this;
+   var parameter = &#x27;tie=&#x27; + tiebreaker;
+   this.parameters.push(parameter);
+   return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.query.prototype.timeout" id="apidoc.element.solr-client.query.prototype.timeout">
+        function <span class="apidocSignatureSpan">solr-client.query.prototype.</span>timeout
+        <span class="apidocSignatureSpan">(time)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">timeout = function (time){
+   var self = this;
+   var parameter = &#x27;timeAllowed=&#x27; + time;
+   this.parameters.push(parameter);
+   return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.solr-client.solr" id="apidoc.module.solr-client.solr">module solr-client.solr</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.solr.createClient" id="apidoc.element.solr-client.solr.createClient">
+        function <span class="apidocSignatureSpan">solr-client.solr.</span>createClient
+        <span class="apidocSignatureSpan">(host, port, core, path, agent, secure, bigint, solrVersion)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createClient(host, port, core, path, agent, secure, bigint, solrVersion){
+  var options = (typeof host === &#x27;object&#x27;) ? host : {
+      host : host,
+      port : port,
+      core : core,
+      path : path,
+      agent : agent,
+      secure : secure,
+      bigint : bigint,
+      solrVersion: solrVersion
+   };
+  return new Client(options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+- Commands supported: search(select), add, delete, update, commit, rollback, optimize, ping, real-time get, prepare commit, soft
+ commit, arbitrary search handler (i.e: mlt, luke ...)
+- Lucene query / DisMax query
+- Grouping / Field Collapsing. (Apache Solr version must be &#x3e;= 3.3)
+- Convenients methods for querying with Facet, MoreLikeThis
+- HTTP Basic Access Authentication
+- Over HTTPS as well
+- Use json-bigint to handle correctly numbers too large for Javascript Number such as the values of the fields *_l and \_version\_. By default json-bigint library is not used because the performance difference compared to the native JSON library is too important with &#x22;large&#x22; chunk of JSON (https://github.com/lbdremy/solr-node-client/issues/114#issuecomment-54165595), but you want to enable it if you use the Optimistic Concurreny feature available in Solr 4.x, along with RealTime Get and Atomic Updates features because they use the \_version\_ field. In order to enable it do `var client = solr.<span class="apidocCodeKeywordSpan">createClient</span>({ bigint : true})` or directly on the client instance `client.options.bigint = true`.
+
+##Documentation
+
+See the website at http://lbdremy.github.com/solr-node-client/.
+
+##Usage
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.solr-client.solr_error" id="apidoc.module.solr-client.solr_error">module solr-client.solr_error</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.solr_error.solr_error" id="apidoc.element.solr-client.solr_error.solr_error">
+        function <span class="apidocSignatureSpan">solr-client.</span>solr_error
+        <span class="apidocSignatureSpan">(req, res, htmlMessage)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function SolrError(req, res, htmlMessage){
+   var message = &#x27;&#x27;;
+   if(htmlMessage){
+      var matches = htmlMessage.match(/&#x3c;pre&#x3e;([\s\S]+)&#x3c;\/pre&#x3e;/);
+      message = decode((matches || [&#x27;&#x27;, htmlMessage])[1].trim());
+   }
+   HTTPError.call(this, req, res, message);
+   Error.captureStackTrace(this,arguments.callee);
+   this.name = &#x27;SolrError&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.solr_error.super_" id="apidoc.element.solr-client.solr_error.super_">
+        function <span class="apidocSignatureSpan">solr-client.solr_error.</span>super_
+        <span class="apidocSignatureSpan">(req, res, message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HTTPError(req, res, message){
+	// N.B: Unfortunately the ES5 spec specifies that Error.call(this)
+	// must always return a new object, and therefore it cannot be used for inheritance
+	// See more section 15.11.1 of ECMA-262 5.1 Edition
+	// http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf
+	// Error.call(this);
+	// Here in order to capture the stack we use Error.captureStackTrace
+	// it sets this.stack
+	Error.captureStackTrace(this,arguments.callee);
+	this.name = &#x27;HTTPError&#x27;;
+
+	var description = STATUS_CODES[res.statusCode] || &#x27;Unknown status code&#x27;;
+	req.headers = req.headers || req._headers;
+	var reqHeaders = Object.keys(req.headers).map(function(name){
+		return name + &#x27;: &#x27; + req.headers[name]
+	});
+	var resHeaders = Object.keys(res.headers).map(function(name){
+		return name + &#x27;: &#x27; + res.headers[name]
+	});
+
+	var protocol = &#x27;http&#x27;;
+	if(hasNestedProperty(req,&#x27;socket.pair.ssl&#x27;)) protocol = &#x27;https&#x27;;
+	if(!req.uri) req.uri =  protocol + &#x27;://&#x27; + req.headers[&#x27;host&#x27;] + req.path;
+
+	this.message = (message || &#x27;&#x27;) + &#x27;\r\n&#x27;
+		+ &#x27;Request URL: &#x27; + url.format(req.uri || {}) + &#x27;\r\n&#x27;
+		+ &#x27;Request method: &#x27; + req.method + &#x27;\r\n&#x27;
+		+ &#x27;Status code: &#x27; + res.statusCode + &#x27; - &#x27; + description + &#x27;\r\n&#x27;
+		+ &#x27;Request headers: \r\n&#x27; + reqHeaders.join(&#x27;\r\n&#x27;) + &#x27;\r\n&#x27;
+		+ &#x27;Response headers: \r\n&#x27; + resHeaders.join(&#x27;\r\n&#x27;)
+		+ (res.body ? &#x27;\r\nResponse body: \r\n&#x27; + res.body : &#x27;&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.solr-client.type" id="apidoc.module.solr-client.type">module solr-client.type</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.type.isNumber" id="apidoc.element.solr-client.type.isNumber">
+        function <span class="apidocSignatureSpan">solr-client.type.</span>isNumber
+        <span class="apidocSignatureSpan">(value, strict)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isNumber(value, strict) {
+  strict = (strict === undefined ? true : strict);
+  var digitRegex = /^\-?\d+$/; // At least 1 digit, possibly a minus sign before
+
+  if (typeof value === &#x27;number&#x27;) {
+    return true;
+  } else {
+    // String ?
+    if (strict) {
+      return ((&#x27;&#x27; + value).match(digitRegex) !== null);
+    } else {
+      return !isNaN(parseInt(value));
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.solr-client.version" id="apidoc.module.solr-client.version">module solr-client.version</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.solr-client.version.version" id="apidoc.element.solr-client.version.version">
+        function <span class="apidocSignatureSpan">solr-client.</span>version
+        <span class="apidocSignatureSpan">(solrVersion)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">version = function (solrVersion) {
+  return (typeof solrVersion === &#x22;number&#x22;) ? (versionsEnum[&#x27;&#x27;+solrVersion+&#x27;.0&#x27;]) : (versionsEnum[solrVersion] ? versionsEnum[solrVersion
+] : versionsEnum[&#x27;3.2&#x27;]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+   this.parameters.push(&#x27;facet.missing=&#x27; + options.missing);
+}
+if(options.method){
+   this.parameters.push(&#x27;facet.method=&#x27; + options.method);
+}
+
+// Only supported with version 4.0 and above
+if(this.solrVersion &#x26;&#x26; (versionUtils.<span class="apidocCodeKeywordSpan">version</span>(this.solrVersion) &#x3e;= versionUtils
+.Solr4_0)) {
+  if(options.pivot){
+    options.field = arrayUtils.toArray(options.pivot.fields);
+    options.field.forEach(function(field) {
+      self.parameters.push(&#x27;facet.pivot=&#x27; + field);
+    });
+  }
+  if(options.pivot.mincount) {
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
